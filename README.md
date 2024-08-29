@@ -11,21 +11,22 @@ We ran this code with python 3.10. Following other packages are required:
 
 ## Data Structure
 The SCs used for the prediction are expected to be in the following structure:
+```
 DATA_DIR
     ├── sub-ID_001
-    │   ├── 031 (Granularity of the first parcellation)
+    │	├── 031 (Granularity of the first parcellation)
     │   │   ├── 031_MIST_10M_mni152_count.csv
     │   │   ├── 031_MIST_10M_mni152_countsift2.csv
     │   │   ├── 031_MIST_10M_mni152_fa.csv
     │   │   └── 031_MIST_10M_mni152_md.csv
     │   ├── 038 (Granularity of the second parcellation)
-	│   │   ├── 038_Craddock_10M_mni152_count.csv
+    │	│   ├── 038_Craddock_10M_mni152_count.csv
     │   │   ├── 038_Craddock_10M_mni152_countsift2.csv
     │   │   ├── 038_Craddock_10M_mni152_fa.csv
     │   │   └── 038_Craddock_10M_mni152_md.csv
-	       .    .    .
-		└── 210 (Granularity of the last parcellation)
-	│   │   ├── 210_Brainnetome_10M_mni152_count.csv
+    .   .   .
+	└── 210 (Granularity of the last parcellation)
+    │   │   ├── 210_Brainnetome_10M_mni152_count.csv
     │   │   ├── 210_Brainnetome_10M_mni152_countsift2.csv
     │   │   ├── 210_Brainnetome_10M_mni152_fa.csv
     │   │   └── 210_Brainnetome_10M_mni152_md.csv
@@ -33,7 +34,7 @@ DATA_DIR
     .   .   .
     .   .   .
     .   .   .
-
+```
 ### Split Files
 We predefined the datasplits such that the data does not need to be re-split for each repetition of the prediction for different pipeline conditions. For each subject group (mixed sex, only males and only females) we defined 100 random 5-fold CV splits of the subjects and saved them to csv files. For each of the 100 repetitions, there were therefore ten csv files: five training sets and five test sets.
 ## Code Structure
