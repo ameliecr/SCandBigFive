@@ -1,0 +1,3 @@
+This folder contains csv files with the mean test set correlations for all evaluated prediction pipelines.
+The different columns of the csv correspond to the mean test r, the brain parcellation, the feature class,the ROI (for RCP feature class) / num features (for the wholebrain, corr and PCA feature class), the SC weighting, the trait, and the subject selection.
+This makes it possible to determine how specific combinations of pipeline conditions perform to predict a certain target.
